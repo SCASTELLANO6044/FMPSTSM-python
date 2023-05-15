@@ -83,7 +83,7 @@ else:
         final_time = time.time() - t
         formatted_time = "{:.4f}".format(final_time)
         print("Tiempo: " +str(formatted_time))
-        print("\n"+"-----------------------------------")
+        print("\n"+"-----------------------------------"+"\n")
 
     if isDirectory:
         files = []
@@ -91,6 +91,7 @@ else:
             if os.path.isfile(os.path.join(second_param, path)):
                 files.append(path)
         for file in files:
+            print("Using: "+file+" as input")
             __FMPSTSM_in_file__(second_param+file)
     else:
         __FMPSTSM_in_file__(second_param)
