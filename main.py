@@ -62,7 +62,7 @@ else:
     elif sys.argv[3] == valid_second[2] or sys.argv[3] == valid_second[3]:
         tab = True
 
-    def __FMPSTSM_in_file__(file_name):
+    def __fmpstsm_in_file__(file_name):
         t = time.time()
 
         matrix = __read_matrix_from_file__(file_name)
@@ -92,6 +92,6 @@ else:
                 files.append(path)
         for file in files:
             print("Using: "+file+" as input")
-            __FMPSTSM_in_file__(second_param+file)
+            __fmpstsm_in_file__(second_param + file)
     else:
-        __FMPSTSM_in_file__(second_param)
+        __fmpstsm_in_file__(second_param)
