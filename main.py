@@ -24,28 +24,30 @@ valid_second = ["-sm", "--memoization", "-st", "--tabulation", "--check"]
 
 
 if sys.argv[1] == "-h" or sys.argv[1] == "--help":
-    print("Uso del programa: FMPSTSM.py [-d [DIRECTORY] | -f [FILE]] [-sm | -st | -check]\n\n" +
-          "optional arguments:\n" +
-          "    -d [DIRECTORY], --directory [DIRECTORY]     process many files in a directory\n" +
-          "    -f [FILE], --file [FILE]                    process a single file\n" +
-          "    -sm, --memoization                          count number of paths in a matrix with given cost to reach\n" +
-          "                                                    (0, 0) cell through Memoization\n" +
-          "    -st, --tabulation                           count number of paths in a matrix with given cost to reach\n" +
-          "                                                    (0, 0) cell through Tabulation\n" +
-          "    --check                                      check that the number of paths in a matrix with given cost\n" +
-          "                                                    is the same through Tabulation and Memoization\n")
+    print("usage: FMPSTSM.exe [-h] [-d [DIRECTORY] | -f [FILE]] [-sm | -st | -check] [-t]\n\n" +
+                "optional arguments:\n" +
+                "    -h, --help                                  Show this help message and exit\n" +
+                "    -d [DIRECTORY], --directory [DIRECTORY]     Process many files in a directory\n" +
+                "    -f [FILE], --file [FILE]                    Process a single file\n" +
+                "    -sm, --memoization                          Find the minimum path sum in a triangle-shaped matrix\n" +
+                "                                                   through Memoization\n" +
+                "    -st, --tabulation                           Find the minimum path sum in a triangle-shaped matrix\n" +
+                "                                                   through Tabulation\n" +
+                "    -check                                      Check that the minimum path sum in a triangle-shaped matrix\n" +
+                "                                                   is the same through Tabulation and Memoization\n")
 elif sys.argv[1] not in valid_first or sys.argv[3] not in valid_second:
     print("No ha escrito los parámetros de entrada del programa correctamente:\n"
-          "Uso del programa: NumberOfPaths.py [-d [DIRECTORY] | -f [FILE]] [-sm | -st | -check]\n\n" +
-          "optional arguments:\n" +
-          "    -d [DIRECTORY], --directory [DIRECTORY]     process many files in a directory\n" +
-          "    -f [FILE], --file [FILE]                    process a single file\n" +
-          "    -sm, --memoization                          count number of paths in a matrix with given cost to reach\n" +
-          "                                                    (0, 0) cell through Memoization\n" +
-          "    -st, --tabulation                           count number of paths in a matrix with given cost to reach\n" +
-          "                                                    (0, 0) cell through Tabulation\n" +
-          "    --check                                      check that the number of paths in a matrix with given cost\n" +
-          "                                                    is the same through Tabulation and Memoization\n")
+          "usage: FMPSTSM.exe [-h] [-d [DIRECTORY] | -f [FILE]] [-sm | -st | -check] [-t]\n\n" +
+                "optional arguments:\n" +
+                "    -h, --help                                  Show this help message and exit\n" +
+                "    -d [DIRECTORY], --directory [DIRECTORY]     Process many files in a directory\n" +
+                "    -f [FILE], --file [FILE]                    Process a single file\n" +
+                "    -sm, --memoization                          Find the minimum path sum in a triangle-shaped matrix\n" +
+                "                                                   through Memoization\n" +
+                "    -st, --tabulation                           Find the minimum path sum in a triangle-shaped matrix\n" +
+                "                                                   through Tabulation\n" +
+                "    -check                                      Check that the minimum path sum in a triangle-shaped matrix\n" +
+                "                                                   is the same through Tabulation and Memoization\n")
 else:
     second_param = ""
     if sys.argv[1] == valid_first[0] or sys.argv[1] == valid_first[1]:
