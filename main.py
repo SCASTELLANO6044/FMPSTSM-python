@@ -5,6 +5,8 @@ import Tabulation
 import sys
 
 
+matrix = [[0]*3 for _ in range(4)]
+
 def __read_matrix_from_file__(file_name):
     with open(file_name, 'r') as f:
         rows = int(f.readline().strip())
